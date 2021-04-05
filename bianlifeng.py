@@ -31,7 +31,7 @@ def main():
 					mk += convertMarkdown(j)
 		print(mk)
 		mk += "asdasdasdasd"
-		print("asdasdasdasd")
+		print(mk)
 		sendServerJ(mk,ServerJ_Session)
 	except Exception as e:
 		print(e)
