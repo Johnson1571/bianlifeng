@@ -29,9 +29,6 @@ def main():
 			for j in i["products"]["data"]:
 				if j['price'] / j['originPrice'] <= 0.69:
 					mk += convertMarkdown(j)
-		print(mk)
-		mk += "asdasdasdasd"
-		print(mk)
 		sendServerJ(mk,ServerJ_Session)
 	except Exception as e:
 		print(e)
@@ -50,7 +47,7 @@ def sendServerJ(res,session):
 		'desp': res
 	}
 	url = "https://sc.ftqq.com/{0}.send".format(session)
-	requests.post(url=url,data=data,timeout=10)
+	requests.post(url=url,data=data,timeout=20)
 	print("[+] Success")
 
 
