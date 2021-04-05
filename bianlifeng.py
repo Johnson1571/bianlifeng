@@ -47,7 +47,8 @@ def sendServerJ(res,session):
 		'desp': res
 	}
 	url = "https://sc.ftqq.com/{0}.send".format(session)
-	requests.post(url=url,data=data,timeout=20)
+	res = requests.post(url=url,data=data,timeout=20)
+	print(res.text)
 	print("[+] Success")
 
 
