@@ -30,6 +30,7 @@ def main():
 				if j['price'] / j['originPrice'] <= 0.69:
 					mk += convertMarkdown(j)
 		print(mk)
+		print("asdasdasdasd")
 		sendServerJ(mk,ServerJ_Session)
 	except Exception as e:
 		print(e)
