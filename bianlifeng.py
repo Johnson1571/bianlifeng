@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 
 url = "https://api.blibee.com/product-api/product/search/promotion/list/v3"
