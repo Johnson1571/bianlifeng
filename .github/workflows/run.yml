@@ -27,7 +27,7 @@ jobs:
         pip install requests
     - name: Build and publish
       env:
-        ServerJ_Session: ${{ secrets.Session }}
-        shopCode: ${{ secrets.ShopCode }}
+        ServerJ_Session: ${{ secrets.SESSION }}
+        shopCode: ${{ secrets.SHOPCODE }}
       run: |
         python bianlifeng.py
