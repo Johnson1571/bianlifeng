@@ -16,7 +16,7 @@ headers = {
     "Accept-Encoding" : "gzip, deflate, br"
 }
 
-ServerJ_Session = os.environ['SESSION']
+ServerJ_Session = os.environ['JSESSION']
 shopCode = os.environ['SHOPCODE']
 
 def main():
