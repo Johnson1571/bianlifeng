@@ -1,0 +1,33 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+name: bianlifeng
+
+on:
+    push:
+        branches:
+            - main
+    schedule:
+        - cron: '0 9,11,13,15,17,19,20 * * *'
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    - name: Build and publish
+      env:
+        JSESSION: ${{ secrets.JSESSION }}
+        SHOPCODE: ${{ secrets.SHOPCODE }}
+      run: |
+        python bianlifeng.py
